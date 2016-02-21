@@ -14,7 +14,7 @@ Content!
 
 ---
 You can play this online! Click the image below!
-[![cmu_adv](https://cloud.githubusercontent.com/assets/6759009/9998540/992f043c-605f-11e5-8adc-c47a9f166ded.png)](http://gs.tads.io/?storyfile=http://www.andrew.cmu.edu/user/bescott/cmu.adv/cmu_adv.t3)
+[![if_template](https://cmu.box.com/shared/static/vjlbbpljq4h4ex15w5fx0uudyjj2mme8.gif)](http://gs.tads.io/?storyfile=http://www.andrew.cmu.edu/user/bescott/cmu.adv/if_template.t3)
 ---
 
 ## Compiling your own! ##
