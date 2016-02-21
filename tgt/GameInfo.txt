@@ -1,0 +1,11 @@
+IFID: TADS3FF0-3DFD-4E23-8419-89B0557C6A19
+Name: My Text Adventure
+Byline: by Me
+AuthorEmail: my_email@aol.com
+Version: v0.1.0
+ReleaseDate: 2016-02-20
+FirstPublished: 2016
+Language: en-US
+LicenseType: Freeware
+CopyingRules: Nominal cost only; compilations allowed
+PresentationProfile: Default
