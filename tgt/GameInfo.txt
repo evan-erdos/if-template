@@ -3,7 +3,7 @@ Name: My Text Adventure
 Byline: by Me
 AuthorEmail: my_email@aol.com
 Version: v0.1.0
-ReleaseDate: 2016-02-20
+ReleaseDate: 2016-02-24
 FirstPublished: 2016
 Language: en-US
 LicenseType: Freeware
