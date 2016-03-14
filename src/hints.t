@@ -53,19 +53,6 @@ In these ways, you can use objects on other objects, put such-and-such on top of
 Additionally, you can string commands together with periods or writing <b>AND</b> between two other valid commands. A quick way to travel through places you've already been would be to type <b>W. N. SW. NW. W</b>, if indeed you wanted to go west, then north then southwest then northwest then west again.
 '''];
 
-+++ StaticGoal 'A Note About Grammar'
-['''
-TL;DR grammar doesn't matter, write as little as you can to get across your point.
-''','''
-While you can certainly be grammatically correct if it pleases you, the program will automatically ignore language constructs it finds silly or irrelelvant, e.g., "the" and "thank you", "lovely weather we're having.", etc., and in some cases, these pleasantries may actually confuse the poor thing. So, for everyone's sake, be terse. Type <b>GET LAMP</b> in the stead of more formal things like:
-''','''
-<b>I BID YOU, MOFT ESTEMMED MR. COMPUTER, SIR, WOULD YOU KINDLY ACERTAIN FOR ME THAT BRIGHT, SUPPLE, BRASS-COLORED LANTERN? I FEAR I WOULD BE SIMPLY <B>OVERCOME</B> WITH GRIEF IF I WERE TO FIND MYSELF IN THE PATH OF DANGER WITHOUT IT AT MY SIDE!</b>"
-''','''
-Moreover, sometimes the limitations of the technology make very specific syntaxes a requirement, rather than a guideline. Talking to people starts up a whole system of its own, and you have to specifically initiate conversation by typing something like <b>TALK TO KAREN</b>. This is different from the way other text adventures work, so it might take some getting used to.
-''','''
-While it may seem a bit clunky now, the syntax will grow on you, and before you know it you'll be <b>GET LAMP</b>-ing with the best of them.
-'''];
-
 +++ HintMenu 'List of Commands';
 
 ++++ StaticGoal 'Command Aliases'
@@ -90,7 +77,7 @@ While it may seem a bit clunky now, the syntax will grow on you, and before you 
  'Go In: <b>IN</b>',
  'Go Out: <b>OUT</b>'];
 
-+ HintMenu 'On Campus';
++ HintMenu 'Observatory';
 
 ++ StaticGoal -> (some.achievement)
 'How do I win the game?'
@@ -111,7 +98,7 @@ The answer is "don't think about it".
 <i>What should I be doing?</i>
 ''','''
 Finally, a good question.
-The answer is "Whatever you want". This is your text adventure.
+You've got to get that book back from the professor.
 '''];
 
 some : object {

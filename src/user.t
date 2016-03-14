@@ -1,4 +1,5 @@
 
+
 #include <adv3.h>
 #include <en_us.h>
 #include "macros.h"
@@ -45,12 +46,162 @@ user : BagOfHolding, Mortal {
     bulk = 10;
     reputation = 50;
     desc {
-        """
-        You look like you need some rest. You're sore, and you have some serious bags under your eyes.
-        """;
+        local s = '<b>Health</b>: ';
+        switch (stats.health) {
+            case -1:
+                s+= '''
+                Your wounds are mortal,
+                and you're barely conscious.
+                ''';
+                break;
+            case 0:
+                s+= '''
+                You have been maimed.
+                Your wounds are very serious.
+                Without some sort of medical attention,
+                you're not going to survive.
+                ''';
+                break;
+            case 1:
+            case 2:
+            case 3:
+                s+= '''
+                You're just barely clinging onto life.
+                If anything happens to you now,
+                it's unlikely that you'll recover.
+                ''';
+                break;
+            case 4:
+            case 5:
+            case 6:
+                s+= '''
+                You're quite hurt. You're able to walk,
+                but not much more than that.
+                ''';
+                break;
+            case 7:
+            case 8:
+            case 9:
+                s+= '''
+                You've been pretty well roughed-up,
+                but you can still keep going.
+                ''';
+            default:
+                s+= '''
+                You're in perfect health.
+                ''';
+                break;
+        }
+        s += '\n<b>Stability</b>: ';
+        switch(stability) {
+            case 0:
+                s += '''
+                You're completely gone.
+                When you're aware of your thoughts, they horrify you.
+                When you're not, you lose entire days, lost in maddness.
+                ''';
+            case 1:
+            case 2:
+                s += '''
+                Your mind is ablaze.
+                Little noises set you off, and you hear voices everywhere.
+                Very soon, you fear you're going to get lost in your head,
+                and you're never going to be able to find your way out.
+                ''';
+                break;
+            case 3:
+            case 4:
+                s += '''
+                You're completely shell-shocked.
+                Your body hurts, you've been tense for days.
+                You forget what you're doing almost constantly,
+                and you have a hard time forming complete sentences.
+                The horrors you've seen are nearly overpowering your reason.
+                ''';
+                break;
+            case 5:
+            case 6:
+            case 7:
+                s += '''
+                You feel lost in your own head.
+                Strange feelings flit in and out, spontaneously.
+                Smaller and smaller things frighten you,
+                and every day you feel like something's chipping away at you.
+                ''';
+                break;
+            case 8:
+            case 9:
+                s += '''
+                At one point in your life,
+                you would have claimed to be unafraid of things like this.
+                You've always been able to rely on your own thoughts,
+                but now you question whether or not you're fully sane.
+                ''';
+                break;
+            case 10:
+                s += '''
+                For some reason, you aren't so afraid.
+                Though some strange things have happened,
+                you feel as though you're in control.
+                ''';
+                break;
+            default:
+                s += '''
+                Strangely, you feel fine.
+                ''';
+                break;
+        }
+
+        s += '\n<b>Sanity</b>: ';
+        switch(sanity) {
+            case 0:
+                s += '''
+                scatteringmountains greatwheel
+                mindfailingwindingtwistshifting
+                *#pZ_5A#WbQM*Mkitchen just the k#G5*v&M%Mitchen. dark.safe.
+                no murdereiPLgB3*(mXWL?M*{nRUoL4Lr$nRq
+                here. murdereiPLgB3*(mXWL?M*{nRUoL4Lcan't get you here.
+                They can't get yo5*v&M%MKB/ nearnearnear
+                QPY3Uca19M9hpbnw86xf?0@Gj3f5sRjx,Fk`qKXNVk9 get you in here...
+                safe..#hhF7SNG|>m@m^$PjOzVS),0BJR%/
+                ''';
+                break;
+            case 1:
+                s += '''
+                T|QPz~P#LBev4?L\<E9tmMtable in kitchen. dirty,
+                2UUAx~}nc#vM9i_Wo16VqCgZM5&F+DmZ1hTi
+                <b>  You have angered the gods.  </b>VP\<YetW>$E]
+                bVZWP6#1Kg@H6m9E#~1u1ob(y{ig4[#V)2~MygGiCndbuy it,i put...
+                here...SZ#VPE#mSaTPO
+                ''';
+                break;
+            case 2:
+                s += '''
+                illerseverywhere, GO INTPmMCa&n\>22\<M\VvRbZo!>G0|`bT![|D7}
+                L$/{v$VCU(Ym[\hiB7Z_3Wr brokecindy gone don't come home please
+                pleaseMzDF+tvery broken, you broke it, you r(s)th
+                <b>  They know what you've done, and they will kill you. </b>
+                6BEymMe/e5L9x\+(t+\M7L^M/come after you and-when-they
+                do-they will gone don't come home please pleaseey
+                andwillleaveyouandyouwill get f_vomL(!,!x=\zjLEtPM!9#.v?
+                ''';
+                break;
+            default:
+                s += '''
+                Your mind is intact, as far as you can tell.
+                ''';
+                break;
+        }
+
+        println(s);
+
         holdingDesc;
         /* inventoryListener: actorInventoryListener */
     }
+
+    stats = user_stats;
+    skills = user_skills;
+    spells = user_spells;
 
     firstNames = [
         ['Robert', Male],   ['Roberta', Female],
@@ -64,7 +215,7 @@ user : BagOfHolding, Mortal {
 
     lastNames = [
         'Watson', 'Wilson', 'King', 'Seinfeld',
-        'the Marauder', 'the Baby Crusher',
+        //'the Marauder', 'the Baby Crusher',
         'Faulkner', 'Card', 'Clark', 'Skywalker',
         'Joyce', 'Rivera', 'Fitzgerald', 'Huxley',
         'Thompson', 'Poe', 'Vogel', 'Hoenikker',
@@ -81,7 +232,7 @@ user : BagOfHolding, Mortal {
     }
 
     reset() {
-        user.travelTo(root,root_door_1, root_door_0);
+        user.travelTo(root,metal_door_1, metal_door_0);
         travelerTravelWithin(user,root_bed);
         user.makePosture(lying);
     }
@@ -94,32 +245,17 @@ user : BagOfHolding, Mortal {
             cmd = inputManager.getInputLine(null,
                 {:"\b\nWho will you be?  &gt;" });
             cls();
-            if (cmd=='') {
-                if (i<1) "Go ahead, pick a name for yourself. ";
-                else if (i<2) {
-                    """
-                    No name, huh? You're a "no-name" kind of guy, huh? Fine. I'll do the legwork.
-
-                    You might not appreciate this, but a programmer somewhere just groaned.
-                    """;
-                    local n = 1+rand(firstNames.length-1);
-                    user.firstname = firstNames[n][1];
-                    user.gender = firstNames[n][2];
-                    user.lastname = lastNames[1+rand(lastNames.length-1)];
-                    user.name = '<<user.firstname>> <<user.lastname>>';
-                    return;
-                }
+            if (cmd=='' || i>2) {
+                local n = 1+rand(firstNames.length-1);
+                user.firstname = firstNames[n][1];
+                user.gender = firstNames[n][2];
+                user.lastname = lastNames[1+rand(lastNames.length-1)];
+                user.name = '<<user.firstname>> <<user.lastname>>';
+                return;
             }
 
-            if (i>7) { "Ok, you're done here. Come back when you've gradutated from the 5th grade."; i/=0; }
-            else if (i>6)
-                "You're really going for it, huh?";
-            else if (i>5)
-                "You're testing my patience.";
             else if (cmd.length()<3)
                 "You really should have a name.";
-            else if (rexSearch('(ben|benjamin)',cmd.toLower()))
-                "Be more original.";
             else if (cmd.length()>24)
                 "What are you, some kind of 16th century Spanish noble? Be reasonable, here.";
             else if (rexSearch('%d',cmd))
@@ -151,25 +287,37 @@ user : BagOfHolding, Mortal {
             cmd = inputManager.getInputLine(null,
                 {:"\b\nMale or Female?  &gt; " });
             cls();
-            if (cmd=='') {
+            if (cmd=='' || i>5) {
                 if (i<1) {
-                    "Pick a gender for yourself. "; continue;
+                    "Pick a gender. "; continue;
                 } else if (i<2) {
                     local b = ((rand(3)%2)==0);
-                    "What, no gender? I guess that's ok. Get ready to be a <<(b)?'':'wo'>>man. ";
                     user.gender = (b)?Male:Female; return;
                 }
             }
-            if (i>5) { "Have it your way."; i/=0; }
-            else if (i>4)
-                "I will do something nasty if you don't quit it.";
             else if (i>3) "Can we get to the point, here?";
             else if (rexMatch('b|boy|m|male|man|masculine',cmd.toLower())) { user.gender = Male; break; }
             else if (rexMatch('f|fe|female|feminine|g|girl|lady',cmd.toLower())) { user.gender = Female; break; }
-            else "Gender isn't black and white, I get it, and there's nothing wrong with that, but just... like.. if you had to choose...";
         }
     }
 
     printGender() { return (user.gender==Male)?'Male':'Female'; }
 }
+
+
+user_stats : StatSet { }
+user_skills : SkillSet { }
+user_spells : SpellSet { }
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -2,7 +2,6 @@
 #include <adv3.h>
 #include <en_us.h>
 #include "macros.h"
-#pragma newline_spacing(preserve)
 
 
 /** `Area` : **`ShuffledEventList`**
@@ -48,9 +47,7 @@ class AreaRoom : Room {
     desc =
         """
         <<masterArea.sharedDesc>>
-        <br>
         <<areaDesc>>
+        <<masterArea.doScript()>>
         """;
-
-    specialDesc { masterArea.doScript(); }
 }

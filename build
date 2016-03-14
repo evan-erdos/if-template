@@ -2,10 +2,10 @@
 #
 # Ben Scott <bescott@andrew.cmu.edu> 2016-02-20
 #
-# my_text_adventure
+# Trail of Cthulhu Set Piece
 
 # name of the project, and the output files
-NAME="my_text_adventure"
+NAME="trail_of_cthulhu"
 
 # flags to be sent directly to the compiler
 FLAGS=""

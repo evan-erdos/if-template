@@ -26,5 +26,3 @@ class NPCWorn : Wearable {
 
 class Group : Mortal { isPlural = true; isIt = true; }
 
-
-

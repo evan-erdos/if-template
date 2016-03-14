@@ -123,11 +123,16 @@ util : object {
                 if (util.offenses>8) {
                     "Come back when you've classed it up a bit.";
                     finishGameMsg('You have missed the point entirely.',null); }
-                else if (util.offenses>7) "Be very careful.";
-                else if (util.offenses>6) "Tenacious, huh?";
-                else if (util.offenses>5) "I'll do something awful if you keep this up.";
-                else if (util.offenses>4) "No, you're right, this is hilarious.";
-                else if (util.offenses>3) "How was middle school for you?";
+                else if (util.offenses>7)
+                    "Be very careful.";
+                else if (util.offenses>6)
+                    "Tenacious, huh?";
+                else if (util.offenses>5)
+                    "I'll do something awful if you keep this up.";
+                else if (util.offenses>4)
+                    "No, you're right, this is hilarious.";
+                else if (util.offenses>3)
+                    "How was middle school for you?";
                 else if (util.offenses>2) "Try me.";
                 else if (util.offenses>1) "Knock it off.";
                 else if (util.offenses>0) "Be careful.";

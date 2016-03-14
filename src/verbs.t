@@ -17,10 +17,6 @@ DefineIAction(Hide) execAction() {
 DefineTAction(HideIn);
 
 #ifdef __DEBUG
-//DefineTAction(Goto) execAction {
-//    if (gPlayerChar==null || gPlayerChar.location==null) return;
-//    gPlayerChar.travelTo(the_cut);
-//};
 
 DefineTAction(Purloin);
 DefineIAction(FiatLux) execAction {
@@ -62,9 +58,6 @@ VerbRule(Kill) 'kill' | 'murder' | 'attack'
 
 
 #ifdef __DEBUG
-
-//VerbRule(Goto) 'goto' //singleDobj
-//    : GotoAction verbPhrase = 'goto (place)';
 
 VerbRule(FiatLux) 'fiat' 'lux'
     : FiatLuxAction verbPhrase =

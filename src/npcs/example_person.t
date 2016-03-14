@@ -41,7 +41,7 @@ This is the description of an ordinary person. You see nothing remarkable about 
 """ {
     isBetterThanYou = null;
 
-    initSpecialDesc { // executes when user !ben_scott.seen
+    initSpecialDesc {
         isInInitState = null; // set to null once we've run
         """
         This is the first time you're seeing this human being, and you have to say, you're not impressed. They're dull, probably not intelligent, and not much for conversation.

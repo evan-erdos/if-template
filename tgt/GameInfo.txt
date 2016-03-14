@@ -1,10 +1,8 @@
-IFID: TADS3FF0-3DFD-4E23-8419-89B0557C6A19
-Name: My Text Adventure
-Byline: by Me
-AuthorEmail: my_email@aol.com
-Version: v0.1.0
-ReleaseDate: 2016-02-24
-FirstPublished: 2016
+IFID: TADS3TOC-3DFD-4E23-8419-89B0337C6A19
+Name: Trail of Cthulhu
+Byline: by Ben Scott
+Version: v0.1.2
+ReleaseDate: 2016-03-07
 Language: en-US
 LicenseType: Freeware
 CopyingRules: Nominal cost only; compilations allowed

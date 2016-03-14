@@ -43,6 +43,14 @@
 #define next inputManager.getKey(null,null)
 
 
+
+/** `MultiLoc` : **`template`**
+ *
+ * Allows `[location]`s to be specified in the template.
+ **/
+MultiLoc template [locationList] 'vocabWords' 'name' "desc"?;
+
+
 /** `ConvNode` : **`template`**
  *
  * Allows the `@location` to be specified in the template, as
